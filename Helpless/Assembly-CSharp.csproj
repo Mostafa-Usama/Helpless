@@ -55,8 +55,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraMovement.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
+     <Compile Include="Assets\script\CameraMovement.cs" />
+     <Compile Include="Assets\script\PlayerMovement.cs" />
  <Reference Include="UnityEngine">
  <HintPath>F:/program files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

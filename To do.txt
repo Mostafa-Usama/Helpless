@@ -1,0 +1,9 @@
+1- Story
+2- movement 
+3- Characters models(main character, monsters, side characters, girl)
+4- location 
+5- sanity system, bills 
+5- cutscenes
+6- find flashlight, pick up, use, batteries
+7- puzzles, inventory
+8- sounds

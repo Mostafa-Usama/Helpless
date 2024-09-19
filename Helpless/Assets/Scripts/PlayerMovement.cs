@@ -12,13 +12,25 @@ public class PlayerMovement : MonoBehaviour
     Vector3 direction = new Vector3();
     public CharacterController cc;
     public Animator playeranim;
-    public float wSpeed, wbSpeed, rnSpeed;
+    public float speed, walkBackSpeed, sprintSpeed;
     float oldwSpeed;
-    bool walking = false;
+    bool walking = false, isSprinting = false;
     
+    #region Head Bob
+    public Transform joint;
+    public float bobSpeed = 10f;
+    public Vector3 bobAmount = new Vector3(.15f, .05f, 0f);
+
+    // Internal Variables
+    private Vector3 jointOriginalPos;
+    private float timer = 0;
+
+    #endregion
+
     private void Start()
     {
-        oldwSpeed = wSpeed;
+        oldwSpeed = speed;
+        jointOriginalPos = joint.localPosition;
     }
     
     // Update is called once per frame
@@ -27,68 +39,65 @@ public class PlayerMovement : MonoBehaviour
         moveX = Input.GetAxisRaw("Horizontal");
         moveZ = Input.GetAxisRaw("Vertical");
         direction = transform.right * moveX + transform.forward * moveZ;
-        cc.Move(direction * wSpeed * Time.deltaTime);
+        cc.Move(direction * speed * Time.deltaTime);
 
+        HeadBob();
 
-        
-        if (Input.GetKeyDown(KeyCode.W))
+        if (direction != Vector3.zero)
         {
-            playeranim.SetTrigger("walk");
-            playeranim.ResetTrigger("idle");
             walking = true;
-        }
-        if(Input.GetKeyUp(KeyCode.W))
-        {
-            playeranim.ResetTrigger("walk");
-            playeranim.SetTrigger("idle");
-            walking = false;
-        }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            
-            playeranim.SetTrigger("walkback");
-            playeranim.ResetTrigger("idle");
-        }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            playeranim.ResetTrigger("walkback");
-            playeranim.SetTrigger("idle");
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {   
-            playeranim.SetTrigger("walk");
-            playeranim.ResetTrigger("idle");
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            playeranim.ResetTrigger("walk");
-            playeranim.SetTrigger("idle");
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            playeranim.SetTrigger("walk");
-            playeranim.ResetTrigger("idle");
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            playeranim.ResetTrigger("walk");
-            playeranim.SetTrigger("idle");
-        }
-        if (walking)
-        {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                wSpeed = wSpeed + rnSpeed;
+                isSprinting = true;
+                speed = sprintSpeed;
                 playeranim.ResetTrigger("walk");
                 playeranim.SetTrigger("sprint");
             }
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
-                wSpeed = oldwSpeed ;
+                isSprinting = false;
+                speed = oldwSpeed ;
                 playeranim.ResetTrigger("sprint");
                 playeranim.SetTrigger("walk");
             }
         }
+        else{
+            walking = false;
+            isSprinting = false;
+            speed = oldwSpeed ;
+        }
     }
   
+
+   private void HeadBob()
+    {
+        if(walking)
+        {
+            // Calculates HeadBob speed during sprint
+            if(isSprinting)
+            {
+                timer += Time.deltaTime * (bobSpeed + sprintSpeed);
+            }
+            // Calculates HeadBob speed during crouched movement
+            // else if (isCrouched)
+            // {
+            //     timer += Time.deltaTime * (bobSpeed * speedReduction);
+            // }
+            // Calculates HeadBob speed during walking
+            else
+            {
+                timer += Time.deltaTime * bobSpeed * 0.9f;
+            }
+            // Applies HeadBob movement
+            joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
+        }
+        else
+        {
+            // Resets when play stops moving
+            timer = 0;
+            joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
+        }
+    }
 }
+
+

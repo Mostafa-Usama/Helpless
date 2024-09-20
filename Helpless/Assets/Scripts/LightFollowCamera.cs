@@ -30,9 +30,6 @@ public class LightFollowCamera : MonoBehaviour
             targetRotation, 
             rotationSpeed * Time.deltaTime
         );
-        // if (Input.GetKeyDown(KeyCode.E)){
-        //    FlashLight.enabled = !FlashLight.enabled;
-        //    LightState = !LightState;
-        // }
+       
     }
 }

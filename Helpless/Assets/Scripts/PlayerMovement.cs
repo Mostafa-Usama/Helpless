@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (direction != Vector3.zero)
         {
+          
+
             walking = true;
             if (Input.GetKey(KeyCode.LeftShift))
             {
@@ -65,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
             walking = false;
             isSprinting = false;
             speed = oldwSpeed ;
+            cc.Move(Vector3.forward * 0.00000000001f * Time.deltaTime);
         }
     }
   

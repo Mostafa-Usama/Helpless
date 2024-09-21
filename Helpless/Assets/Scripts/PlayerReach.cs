@@ -24,6 +24,7 @@ public class PlayerReach : MonoBehaviour
         if (col.CompareTag("Batteries")){
             InteractText.text = "Pick Up Batteries\n [E]";
             InteractText.enabled = true;
+            col.GetComponent<Outline>().enabled = true;
             if (Input.GetKeyDown(KeyCode.E)){
             InteractText.enabled = false;
                 FlashlightScrpit.BatteryLife += 50;
@@ -35,6 +36,9 @@ public class PlayerReach : MonoBehaviour
     }
     void OnTriggerExit(Collider col){
         InteractText.enabled = false;
+        if ( col.GetComponent<Outline>()!= null){
+             col.GetComponent<Outline>().enabled = false;
+        }
     }
     IEnumerator ShowDialouge(){
         dialouge.enabled = true;

@@ -37,11 +37,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\ModularFirstPersonController\FirstPersonController\FirstPersonController.cs" />
+     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\FlashlightManager.cs" />
      <Compile Include="Assets\Scripts\LightFollowCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerReach.cs" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+     <None Include="Assets\QuickOutline\Readme.txt" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

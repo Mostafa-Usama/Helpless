@@ -24,9 +24,12 @@ public class PlayerMovement : MonoBehaviour
     // Internal Variables
     private Vector3 jointOriginalPos;
     private float timer = 0;
-
     #endregion
+    public GameObject inventory;
+    public static bool isInventoryOpen = false;
 
+    public Transform playerCamera;
+    public Quaternion cameraOldRotation ;  
     private void Start()
     {
         oldwSpeed = speed;
@@ -69,6 +72,24 @@ public class PlayerMovement : MonoBehaviour
             speed = oldwSpeed ;
             cc.Move(Vector3.forward * 0.00000000001f * Time.deltaTime);
         }
+
+        if (Input.GetKeyDown(KeyCode.Tab)){
+            inventory.SetActive(!inventory.activeSelf);
+            isInventoryOpen = !isInventoryOpen;    
+            cameraOldRotation = playerCamera.localRotation; 
+           
+            if (isInventoryOpen){
+               
+                Cursor.lockState = CursorLockMode.None;
+                playerCamera.GetComponent<CameraMovement>().enabled = false;
+            }
+            else{
+                playerCamera.localRotation = cameraOldRotation;
+                Cursor.lockState = CursorLockMode.Locked;
+                playerCamera.GetComponent<CameraMovement>().enabled = true;
+            }
+        }
+        
     }
   
 

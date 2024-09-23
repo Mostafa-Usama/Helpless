@@ -1,17 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+[Serializable]
+public class allItemsClass{
+    public string key;
+    public int value;
+}
 
 public class PlayerReach : MonoBehaviour
 {
     public Text InteractText, dialouge;
     public FlashlightManager FlashlightScrpit;
+    public Inventory_Manager inventory_Manager;
+    
+    public allItemsClass [] allItems;
+     Dictionary<string, int> itemsDictianory = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Start()
     {
         InteractText.enabled =false;
         dialouge.enabled = false;
+        foreach (var item in allItems)
+        {
+           itemsDictianory.Add(item.key, item.value);
+        }
     }
 
     // Update is called once per frame
@@ -26,13 +41,15 @@ public class PlayerReach : MonoBehaviour
             InteractText.enabled = true;
             col.GetComponent<Outline>().enabled = true;
             if (Input.GetKeyDown(KeyCode.E)){
-            InteractText.enabled = false;
-                FlashlightScrpit.BatteryLife += 50;
+                InteractText.enabled = false;
+                //FlashlightScrpit.BatteryLife += 50;
                 dialouge.text = "You picked up a battery";
                 StartCoroutine("ShowDialouge");
+                inventory_Manager.addItem(itemsDictianory[col.tag]);
                 Destroy(col.gameObject);
             }
         }
+        
     }
     void OnTriggerExit(Collider col){
         InteractText.enabled = false;

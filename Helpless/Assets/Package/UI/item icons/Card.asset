@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e71c1294ce506249a85233172e9a0a3, type: 3}
+  m_Name: Card
+  m_EditorClassIdentifier: 
+  itemName: Finish
+  icon: {fileID: 8936360492657353606, guid: abfcf8f6e7a9ae94ab62d12aefbadc2d, type: 3}
+  itemType: Consumables
+  description: 

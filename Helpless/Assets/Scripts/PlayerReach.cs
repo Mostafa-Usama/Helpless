@@ -15,7 +15,7 @@ public class PlayerReach : MonoBehaviour
     public Text InteractText, dialouge;
     public FlashlightManager FlashlightScrpit;
     public Inventory_Manager inventory_Manager;
-    
+    public Texture2D cursorHandIcon;
     public allItemsClass [] allItems;
      Dictionary<string, int> itemsDictianory = new Dictionary<string, int>();
     // Start is called before the first frame update
@@ -40,8 +40,11 @@ public class PlayerReach : MonoBehaviour
             InteractText.text = "Pick Up Batteries\n [E]";
             InteractText.enabled = true;
             col.GetComponent<Outline>().enabled = true;
+           // Cursor.SetCursor(cursorHandIcon,Vector2.zero, CursorMode.Auto);
+            //Cursor.visible = true;
             if (Input.GetKeyDown(KeyCode.E)){
                 InteractText.enabled = false;
+              //  Cursor.visible = false;
                 //FlashlightScrpit.BatteryLife += 50;
                 dialouge.text = "You picked up a battery";
                 StartCoroutine("ShowDialouge");
@@ -52,6 +55,7 @@ public class PlayerReach : MonoBehaviour
         
     }
     void OnTriggerExit(Collider col){
+       // Cursor.visible = false;
         InteractText.enabled = false;
         if ( col.GetComponent<Outline>()!= null){
              col.GetComponent<Outline>().enabled = false;

@@ -19,6 +19,8 @@ public class PlayerReach : MonoBehaviour
     public allItemsClass [] allItems;
     public Animator dooranim; 
      Dictionary<string, int> itemsDictianory = new Dictionary<string, int>();
+     bool inReach = false;
+     GameObject colGame = null;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,59 +35,72 @@ public class PlayerReach : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         if (Input.GetButtonDown("interact") && inReach){
+            Interact(colGame);
+         }
     }
+
+
+    void Interact(GameObject gameObj){
+        if (gameObj.CompareTag("Batteries")){
+            InteractText.enabled = false;
+              //  Cursor.visible = false;
+                //FlashlightScrpit.BatteryLife += 50;
+                StopCoroutine("ShowDialouge");
+                dialouge.text = "You picked up a battery";
+                StartCoroutine("ShowDialouge");
+                
+                inventory_Manager.addItem(itemsDictianory[gameObj.tag]);
+                Destroy(gameObj);
+        }
+       if (gameObj.CompareTag("door")){
+            bool isopen = gameObj.GetComponent<doorscript>().isOpen;
+            bool locked = gameObj.GetComponent<doorscript>().isLocked;
+            dooranim = gameObj.GetComponent<Animator>();
+           // InteractText.enabled = true;
+            //InteractText.text = isopen? "Close Door\n [E]" : "Open Door\n [E]" ;
+            if (!locked){
+
+                if (!isopen)
+                {
+                    dooranim.SetBool("isOpened", true);
+                    dooranim.SetBool("isClosed", false);
+                }
+                else
+                {
+                    dooranim.SetBool("isOpened", false);
+                    dooranim.SetBool("isClosed", true);
+                }
+                gameObj.GetComponent<doorscript>().isOpen = !gameObj.GetComponent<doorscript>().isOpen;
+                Debug.Log(gameObj.GetComponent<doorscript>().isOpen.ToString());
+            }
+            else
+            {
+                StopCoroutine("ShowDialouge");
+                dialouge.text = "Door is Locked";
+                StartCoroutine("ShowDialouge");
+            }
+        }
+    }
+   
     
+
     void OnTriggerStay(Collider col){
         if (col.CompareTag("Batteries")){
             InteractText.text = "Pick Up Batteries\n [E]";
             InteractText.enabled = true;
             col.GetComponent<Outline>().enabled = true;
-           // Cursor.SetCursor(cursorHandIcon,Vector2.zero, CursorMode.Auto);
-            //Cursor.visible = true;
-            if (Input.GetKeyDown(KeyCode.E)){
-                InteractText.enabled = false;
-              //  Cursor.visible = false;
-                //FlashlightScrpit.BatteryLife += 50;
-                dialouge.text = "You picked up a battery";
-                StartCoroutine("ShowDialouge");
-                
-                inventory_Manager.addItem(itemsDictianory[col.tag]);
-                Destroy(col.gameObject);
-            }
-            
+            inReach = true;
+            colGame = col.gameObject;
                 
             }
         if (col.CompareTag("door"))
         {
-            Debug.Log("aaaaaaaaaaaaaaaaaaa");
-            bool isopen = col.GetComponent<doorscript>().open;
-            bool locked = col.GetComponent<doorscript>().locked;
-            dooranim = col.GetComponent<Animator>();
-
-            if (Input.GetKeyDown(KeyCode.E) && !locked)
-            {
-                if (!isopen)
-                {
-                    dooranim.SetTrigger("open");
-                    dooranim.ResetTrigger("close");
-
-                    col.GetComponent<doorscript>().open = true;
-                }
-                else
-                {
-                    dooranim.SetTrigger("close");
-                    dooranim.ResetTrigger("open");
-                    col.GetComponent<doorscript>().open = false;
-
-                }
-
-            }
-            else
-            {
-                dialouge.text = "Door is Locked";
-                StartCoroutine("ShowDialouge");
-            }
+            inReach = true;
+            colGame = col.gameObject;
+            bool isopen = col.GetComponent<doorscript>().isOpen;
+            InteractText.enabled = true;
+            InteractText.text = isopen? "Close Door\n [E]" : "Open Door\n [E]" ;
         }
         
     }
@@ -95,6 +110,7 @@ public class PlayerReach : MonoBehaviour
         if ( col.GetComponent<Outline>()!= null){
              col.GetComponent<Outline>().enabled = false;
         }
+        inReach = false;
     }
     IEnumerator ShowDialouge(){
         dialouge.enabled = true;

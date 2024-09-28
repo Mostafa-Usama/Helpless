@@ -5,20 +5,16 @@ using UnityEngine;
 public class doorscript : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool open = false , locked = false;
+    public bool isOpen, isLocked;
     Animator animator;
     void Start()
     {
         animator = GetComponent<Animator>();
-        if (open) 
+        if (isOpen) 
         {
-            animator.SetTrigger("open");
+            animator.SetBool("isOpened", true);
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+ 
 }

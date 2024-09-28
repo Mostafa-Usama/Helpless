@@ -57,14 +57,16 @@ public class PlayerReach : MonoBehaviour
             bool isopen = gameObj.GetComponent<doorscript>().isOpen;
             bool locked = gameObj.GetComponent<doorscript>().isLocked;
             dooranim = gameObj.GetComponent<Animator>();
-           // InteractText.enabled = true;
+            // InteractText.enabled = true;
             //InteractText.text = isopen? "Close Door\n [E]" : "Open Door\n [E]" ;
+            gameObj.GetComponent<doorscript>().playsound();
             if (!locked){
 
                 if (!isopen)
                 {
                     dooranim.SetBool("isOpened", true);
                     dooranim.SetBool("isClosed", false);
+
                 }
                 else
                 {

@@ -12,7 +12,7 @@ public class FlashlightManager : MonoBehaviour
     public float BatteryDrainRate;
     bool isFlashlightOn = false;
     public Image FillColor;
-
+    AudioSource on_off_flash;
 
     public float amount;
     public float maxAmount;
@@ -23,6 +23,7 @@ public class FlashlightManager : MonoBehaviour
     {
         BatteryLife = BatteryLifeSlider.maxValue;
         initialPosition = transform.localPosition;
+        on_off_flash = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -45,6 +46,7 @@ public class FlashlightManager : MonoBehaviour
             else{
                 WhiteLight.enabled = !WhiteLight.enabled;
                 isFlashlightOn = !isFlashlightOn;
+                on_off_flash.Play();
             }
         }
         if (isFlashlightOn && BatteryLife > 0){

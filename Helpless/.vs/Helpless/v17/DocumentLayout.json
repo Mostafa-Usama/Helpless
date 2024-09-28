@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "F:\\helpless\\Helpless\\Helpless\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|f:\\helpless\\helpless\\helpless\\assets\\scripts\\lightfollowcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lightfollowcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\playerreach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerreach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\helpless\\Helpless\\Helpless\\Assets\\script\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\script\\PlayerMovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|f:\\helpless\\helpless\\helpless\\assets\\scripts\\doorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\doorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\lightfollowcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\lightfollowcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +34,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LightFollowCamera.cs",
-              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\LightFollowCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\LightFollowCamera.cs",
-              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\LightFollowCamera.cs",
-              "RelativeToolTip": "Assets\\Scripts\\LightFollowCamera.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAABYAAAA",
+              "DocumentIndex": 2,
+              "Title": "doorscript.cs",
+              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\doorscript.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\doorscript.cs",
+              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\doorscript.cs",
+              "RelativeToolTip": "Assets\\Scripts\\doorscript.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-18T18:57:21.233Z",
+              "WhenOpened": "2024-09-27T23:28:11.484Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PlayerMovement.cs",
-              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\script\\PlayerMovement.cs",
-              "RelativeDocumentMoniker": "Assets\\script\\PlayerMovement.cs",
-              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\script\\PlayerMovement.cs",
-              "RelativeToolTip": "Assets\\script\\PlayerMovement.cs",
+              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
+              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAjwDkAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T19:18:19.203Z"
+              "WhenOpened": "2024-09-27T23:21:59.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerReach.cs",
+              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerReach.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerReach.cs",
+              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerReach.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerReach.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAAwD0AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T23:14:51.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LightFollowCamera.cs",
+              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\LightFollowCamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LightFollowCamera.cs",
+              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\LightFollowCamera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LightFollowCamera.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-18T18:57:21.233Z",
+              "EditorCaption": ""
             }
           ]
         }

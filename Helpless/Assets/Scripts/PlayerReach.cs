@@ -17,6 +17,7 @@ public class PlayerReach : MonoBehaviour
     public Inventory_Manager inventory_Manager;
     public Texture2D cursorHandIcon;
     public allItemsClass [] allItems;
+    public Animator dooranim; 
      Dictionary<string, int> itemsDictianory = new Dictionary<string, int>();
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,42 @@ public class PlayerReach : MonoBehaviour
                 //FlashlightScrpit.BatteryLife += 50;
                 dialouge.text = "You picked up a battery";
                 StartCoroutine("ShowDialouge");
+                
                 inventory_Manager.addItem(itemsDictianory[col.tag]);
                 Destroy(col.gameObject);
+            }
+            
+                
+            }
+        if (col.CompareTag("door"))
+        {
+            Debug.Log("aaaaaaaaaaaaaaaaaaa");
+            bool isopen = col.GetComponent<doorscript>().open;
+            bool locked = col.GetComponent<doorscript>().locked;
+            dooranim = col.GetComponent<Animator>();
+
+            if (Input.GetKeyDown(KeyCode.E) && !locked)
+            {
+                if (!isopen)
+                {
+                    dooranim.SetTrigger("open");
+                    dooranim.ResetTrigger("close");
+
+                    col.GetComponent<doorscript>().open = true;
+                }
+                else
+                {
+                    dooranim.SetTrigger("close");
+                    dooranim.ResetTrigger("open");
+                    col.GetComponent<doorscript>().open = false;
+
+                }
+
+            }
+            else
+            {
+                dialouge.text = "Door is Locked";
+                StartCoroutine("ShowDialouge");
             }
         }
         

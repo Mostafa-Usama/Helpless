@@ -35,7 +35,7 @@ public class PlayerReach : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetButtonDown("interact") && inReach){
+         if (Input.GetButtonDown("interact") && inReach && colGame != null){
             Interact(colGame);
          }
     }
@@ -52,6 +52,7 @@ public class PlayerReach : MonoBehaviour
                 
                 inventory_Manager.addItem(itemsDictianory[gameObj.tag]);
                 Destroy(gameObj);
+                
         }
        if (gameObj.CompareTag("door")){
             bool isopen = gameObj.GetComponent<doorscript>().isOpen;
@@ -112,6 +113,7 @@ public class PlayerReach : MonoBehaviour
         if ( col.GetComponent<Outline>()!= null){
              col.GetComponent<Outline>().enabled = false;
         }
+        colGame = null;
         inReach = false;
     }
     IEnumerator ShowDialouge(){

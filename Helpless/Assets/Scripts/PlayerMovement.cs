@@ -145,17 +145,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (walking)
         {
-            if (isSprinting)
-            {
-                timer += Time.deltaTime * (bobSpeed + sprintSpeed);
-            }
-            else
-            {
-                timer += Time.deltaTime * bobSpeed * 0.9f;
-            }
-            joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
-        }
-        else
+            timer += Time.deltaTime * bobSpeed * 0.9f;
+        }  
+        if (isSprinting)
+        {
+            timer += Time.deltaTime * (bobSpeed + sprintSpeed)* 1.5f ;
+        }          
+        joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
+        
+        if (!walking && !isSprinting)
         {
             timer = 0;
             joint.localPosition = new Vector3(Mathf.Lerp(joint.localPosition.x, jointOriginalPos.x, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.y, jointOriginalPos.y, Time.deltaTime * bobSpeed), Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));

@@ -57,6 +57,7 @@
   <ItemGroup>
      <Compile Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_CustomWind.cs" />
      <Compile Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
+     <Compile Include="Assets\Package\UI\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\FlashlightManager.cs" />
      <Compile Include="Assets\Scripts\Inventory_Manager.cs" />
@@ -65,21 +66,35 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerReach.cs" />
      <Compile Include="Assets\Scripts\doorscript.cs" />
-     <Compile Include="Assets\UI\QuickOutline\Scripts\Outline.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserManager.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabBrowserWindow.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\AssetBrowser\SketchfabModelWindow.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\Resizer.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporterWindow.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabLogger.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabUI.cs" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Billboard_301.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Resources\CTI_Camera-DepthNormalTexture_301.shader" />
-     <None Include="Assets\UI\QuickOutline\Resources\Shaders\OutlineMask.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
+     <None Include="Assets\Package\UI\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Resources\CTI_Internal-DeferredShading.shader" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\Includes\CTI_BillboardVertex_301.cginc" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\Includes\CTI_TranslucentLighting_301.cginc" />
-     <None Include="Assets\UI\QuickOutline\Readme.txt" />
+     <None Include="Assets\Package\UI\QuickOutline\Readme.txt" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_301.shader" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Resources\CTI_Internal-DeferredReflections.shader" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\Includes\CTI_indirect.cginc" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Leaves_301.shader" />
      <None Include="Assets\Package\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\Includes\CTI_Builtin4xTreeLibraryTumbling_301.cginc" />
-     <None Include="Assets\UI\QuickOutline\Resources\Shaders\OutlineFill.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
+     <None Include="Assets\Package\UI\QuickOutline\Resources\Shaders\OutlineFill.shader" />
  <Reference Include="UnityEngine">
  <HintPath>F:/program files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -262,6 +277,18 @@
  </Reference>
  <Reference Include="UnityEditor">
  <HintPath>F:/program files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="GLTFSerialization">
+ <HintPath>F:/helpless/Helpless/Helpless/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Unity">
+ <HintPath>F:/helpless/Helpless/Helpless/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>F:/helpless/Helpless/Helpless/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="SketchfabPlugin">
+ <HintPath>F:/helpless/Helpless/Helpless/Assets/Sketchfab For Unity/Dependencies/Libraries/SketchfabPlugin.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>F:/program files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

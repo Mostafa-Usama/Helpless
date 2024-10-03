@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Batteries
   - door
+  - stairs
+  - ground
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - Postprocessing
   - tool
-  - 
+  - ground
   - 
   - 
   - 

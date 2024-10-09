@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "F:\\helpless\\Helpless\\Helpless\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\playerreach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerreach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|f:\\helpless\\helpless\\helpless\\assets\\scripts\\playerreach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerreach.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|f:\\helpless\\helpless\\helpless\\assets\\package\\easyroads3d\\prefab meshes\\_custom prefabs.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\package\\easyroads3d\\prefab meshes\\_custom prefabs.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B03C221-3869-4EB2-B8DB-0FC0A67E51F5}|Assembly-CSharp.csproj|F:\\helpless\\Helpless\\Helpless\\assets\\scripts\\doorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "_custom prefabs.txt",
+              "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Package\\EasyRoads3D\\prefab meshes\\_custom prefabs.txt",
+              "RelativeDocumentMoniker": "Assets\\Package\\EasyRoads3D\\prefab meshes\\_custom prefabs.txt",
+              "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Package\\EasyRoads3D\\prefab meshes\\_custom prefabs.txt",
+              "RelativeToolTip": "Assets\\Package\\EasyRoads3D\\prefab meshes\\_custom prefabs.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-07T19:05:59.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FlashlightManager.cs",
               "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\FlashlightManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FlashlightManager.cs",
@@ -50,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "doorscript.cs",
               "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\doorscript.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\doorscript.cs",
@@ -62,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "PlayerMovement.cs",
               "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement.cs",
@@ -70,25 +87,24 @@
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement.cs",
               "ViewState": "AQIAALAAAAAAAAAAAAAAwM0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-27T23:21:59.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-27T23:21:59.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerReach.cs",
               "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerReach.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerReach.cs",
               "ToolTip": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\PlayerReach.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerReach.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAAwD0AAAA7AAAA",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAEwG8AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-27T23:14:51.67Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LightFollowCamera.cs",
               "DocumentMoniker": "F:\\helpless\\Helpless\\Helpless\\Assets\\Scripts\\LightFollowCamera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LightFollowCamera.cs",
